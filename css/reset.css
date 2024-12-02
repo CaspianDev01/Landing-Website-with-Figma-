@@ -1,0 +1,26 @@
+
+html, body, div, span,iframe,
+h1, h2, h3, h4, h5, h6, p,pre,
+a,img,sub, sup,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table,tbody, tfoot, thead, tr, th, td,
+footer, header, 
+nav{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+} 
+footer, header,nav, section {
+    display: block;
+}
+*{box-sizing: border-box;}
+ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
