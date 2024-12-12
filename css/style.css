@@ -51,7 +51,8 @@ nav{
     margin: auto;
     text-align: center;
     background: #e7ecffcf;
-    position: fixed;
+
+    
 }
 
 #menu li a{
@@ -365,6 +366,7 @@ hr{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position:fixed;
     }
     nav h1{line-height: 2.3em;}
     
