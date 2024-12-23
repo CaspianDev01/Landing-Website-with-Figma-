@@ -1,15 +1,17 @@
 /* Mobile Version */
 header{
     height: 100%;
+    position: relative;
 }
 #hero{
     background: url('/img/hero_header_bg.png')center/cover;
     height: 100vh;
-    float: right;
+    display: none;
 }
 
 #hero-content{
     width: 100%;
+    padding: 30px;
 }
 #hero-content h2{
     font: 700 2em/1.5em 'Roboto',sans-serif;
@@ -21,6 +23,8 @@ header{
 }
 #hero img{
     width: 100%;
+    position: relative;
+    left: 9%;
 }
 #hero-content #kit{
     max-width: 189.13px;
@@ -50,15 +54,17 @@ nav{
     width: 100vw;
     margin: auto;
     text-align: center;
-    background: #e7ecffcf;
-
-    
+    background: rgba(164, 164, 250, 0.5);
+    position: fixed;
+}
+.container{
+    min-height: 30vh;
 }
 
 #menu li a{
     text-decoration: none;
     font: normal .7em/1.5em 'Roboto',sans-serif;
-    color: #505F98;
+    color: #505e98b0;
 }
 nav button{
     width: 160px;
@@ -124,7 +130,7 @@ ul.menu2 >li:hover ul{
     font: 700 2em/2em 'Robot',sans-serif;
     color: #091133;
 }
-
+.intro-text {padding: 50px;}
 .intro-text p{
     font: normal 1em/1.6em 'Robot',sans-serif;
     color: #6F7CB2;
@@ -132,6 +138,7 @@ ul.menu2 >li:hover ul{
 .info{
     width: 50%;
     margin: auto;
+    padding: 50px;
 }
 .info img {
     width: 100%;
@@ -145,6 +152,7 @@ ul.menu2 >li:hover ul{
     font: normal .7em/1.1em 'Roboto',sans-serif;
     color: #5D6970;
 }
+.info-right{margin: 30px 0;}
 #center{
     width: 50%;
     margin: auto;
@@ -161,7 +169,9 @@ ul.menu2 >li:hover ul{
     font: normal 1em/1.6em 'Roboto',sans-serif;
     color: #6F7CB2;
 }
-
+#center-content{
+    padding: 50px;
+}
 #bottom{
     width: 50%;
     margin: auto;
@@ -180,7 +190,9 @@ ul.menu2 >li:hover ul{
     font: 1em/1.6em 'Roboto',sans-serif;
     color: #6F7CB2;
 }
-
+.bottom-content{
+    padding: 50px;
+}
 #last{
     width: 50%;
     margin: auto;
@@ -197,6 +209,7 @@ ul.menu2 >li:hover ul{
     font: 1em/1.6em 'Roboto',sans-serif;
     color: #6F7CB2;
 }
+.last-content{padding: 50px;}
 #pta{
     text-align: center;
     margin-top: 25px;
@@ -341,6 +354,12 @@ hr{
     padding: 10px;
     color: #fff;
 }
+.btn{
+    padding: 10px 25px;
+}
+footer{
+    padding: 10px 10px;
+}
 .footer-menu ul li{
     display: inline-block;
     padding: 25px;
@@ -358,6 +377,7 @@ hr{
     color: #B0B8BC;
     margin-right: 10px;
 }
+
 /* Destkop Version */
 
 @media only screen and (min-width: 768px){
@@ -366,7 +386,6 @@ hr{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position:fixed;
     }
     nav h1{line-height: 2.3em;}
     
@@ -381,7 +400,9 @@ hr{
     #menu li{
         display: inline-block;
     }
-
+    .btn button{
+        cursor: pointer;
+    }
     #menu li a{
         padding: 25px 25px;
     }
@@ -389,51 +410,66 @@ hr{
     header{
        width: 100vh;
     }
-    
+    #hero{
+        position: absolute;
+        left: 60%;
+        overflow: hidden;
+        top: 8%;
+        display: initial;
+    }
     #hero img{
         display: inline-block;
         margin-top: 150px;
         margin-left: 150px;
         width: 80%;
     }
-
+    
     #hero-content{
-      padding: 50px;
+     padding: 5% 2%;
     }
 
     #intro{
        float: right;
        margin: 0;
+       padding: 50px;
     }
     
     .intro-text{
         width: 50%;
         margin-top: 35%;
+        padding: 50px;
     }
     .intro-text h2{font-size: 2.5em; line-height: 2.2em;}
     .info{
         display: flex;
         margin-top: 10%;
+        align-items: center;
+        padding: 30px;
     }
     #center{
         float: left;
         margin-top: 20%;
     }
+    .info-left,.info-right{padding: 10px;}
     #center-content{
         width: 50%;
         float: right;
         margin-top: 15%;
     }
- 
+    .center-title{
+        padding: 50px;
+    }
     #bottom{
         float: right;
         margin-top: 10%;
         margin-bottom: 10%;
+        padding: 50px;
     }
     .bottom-content{
         width: 50%;
         float: right;
         margin-top: 15%;
+        padding: 50px;
     }
     main::after{
         clear: both;
@@ -442,6 +478,7 @@ hr{
     }
     #last{
         float: left;
+        padding: 50px;
     }
     #rectangle{
         margin-top: 10%;
@@ -449,6 +486,7 @@ hr{
     }
     .last-content{
         margin-bottom: 15%;
+        padding: 50px;
     }
     #rectangle img{
         height: 100vh;
@@ -466,6 +504,7 @@ hr{
     footer{
        position: relative;
        top: 200px;
+       padding: 20px 10px;
     }
     #hero-content h2{font-size: 3em;}
     #hero-content p{line-height: 2.5em;}
@@ -489,7 +528,7 @@ hr{
 
     .footer-icons div{
         float: right;
-        padding: 5px;
+        padding: 5px 10px;
         color: #B0B8BC;
         margin-right: 10px;
     }
